@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.center {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2%;
+}
+
+header {
+    background-color: green;
+    padding: 20px 0px;
+    color: white;
+}
+
+.menu a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px 0;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.characters {
+    margin-top: 40px;
+}
+
+.character-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.character {
+    flex-basis: 22%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.character img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.character h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.character p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.container {
+    display: flex;
+    width: 60px;
+    height: 30px;
+    background: #123;
+    border-radius: 60px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.container.active {
+    background-color: #000;
+}
+
+.btn {
+    width: 60px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+.btn.active:before {
+    transform: translate(32.5px, -50%);
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #222;
+}
+
+.dark-mode .menu a {
+    color: white;
+}
+
+.dark-mode .btn {
+    background-color: white;
+}
+
+.dark-mode .btn.active:before {
+    background-color: black;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div style="justify-content: space-around;" class="center">
+            <div class="logo"><h2>Bankai</h2></div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Sobre</a>
+            </div>
+            <div class="container">
+                <div class="btn"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="center">
+        <section>
+            <h1>Bem-vindo ao mundo de Bleach</h1>
+            <p>Descubra tudo sobre o anime, seus personagens, episódios e muito mais!</p>
+        </section>
+    </main>
+
+    <section class="characters">
+        <h2>Personagens Principais</h2>
+        <div class="character-list">
+            <div class="character">
+                <img src="Ichigo.jpg" alt="Ichigo Kurosaki">
+                <h3>Ichigo Kurosaki</h3>
+                <p>O protagonista da série, Ichigo é um Shinigami substituto que luta para proteger seus amigos e o mundo humano.</p>
+            </div>
+            <div class="character">
+                <img src="rukia.jpg" alt="Rukia Kuchiki">
+                <h3>Rukia Kuchiki</h3>
+                <p>Uma Shinigami que inicialmente transfere seus poderes para Ichigo, Rukia é um membro do clã Kuchiki e uma importante aliada.</p>
+            </div>
+            <div class="character">
+                <img src="byakuya.jpg" alt="Byakuya Kuchiki">
+                <h3>Byakuya Kuchiki</h3>
+                <p>Capitão do 6º Esquadrão e irmão mais velho de Rukia, Byakuya é conhecido por sua calma e habilidades de combate excepcionais.</p>
+            </div>
+            <div class="character">
+                <img src="Orihime.png" alt="Orihime Inoue">
+                <h3>Orihime Inoue</h3>
+                <p>Amiga de infância de Ichigo, Orihime possui poderes únicos de cura e é uma personagem central na trama de Bleach.</p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
